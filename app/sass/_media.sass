@@ -18,14 +18,31 @@
   .services-header__item
     font-size: 18px
     line-height: 23px
+  .car-item
+    padding: 10px 15px
+    margin: 10px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-  .btn-content
-    font-size: 18px
-    line-height: 23px
+  .container
+    padding: 0 25px
+  .content-btn
+    display: flex
+    .main-btn
+      margin: 0
+      flex-basis: 50%
+      margin: 0 25px
+      .btn-content
+        text-align: center
+        padding: 20px 0
   .title
     margin-top: 50px
+  .services-block__one, .services-block__four-item
+    &:before
+      border-radius: 30px
+  .services-text
+    font-size: 16px
+    line-height: 23px
   .price-block
     flex-wrap: wrap
   .price-img
@@ -47,19 +64,14 @@
   .car-item
     flex: 1 1 calc(33.33% - 60px)
     margin: 10px
-    padding: 10px 15px
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-  .car-item
-    padding: 25px 10px
+    padding: 20px 15px
+    height: 100%
+  .show-info
+    display: block
   .car-info__item_second
     max-height: 0
     overflow: hidden
     transition: max-height .5s ease-out
-
-  .car-info
-    margin-bottom: 30px
   .car-btn
     width: 100%
     & .main-btn
@@ -67,12 +79,130 @@
   .car-btn__content
     text-align: center
     padding: 20px 0
+  .car-info__item_main
+    padding-right: 40px
+    & ul
+      grid-template-columns: repeat(2, 1fr)
+  .box-item
+    flex-wrap: wrap
+    justify-content: center
+  .box-img
+    flex-basis: 50%
+  .box-info
+    flex-basis: 50%
+  .box-btn
+    margin-top: 20px
+    flex-basis: 100%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  .header-text
+    font-size: 11px
+  .slogan__slogan
+    font-size: 35px
+    margin-bottom: 40px
+  .car-item
+    padding: 25px 10px
+  .car-info
+    margin-bottom: 30px
+  .benefits
+    flex-wrap: wrap
+  .benefits-item
+    flex: 1 1 calc(50% - 100px)
+    margin: 10px 25px
+    box-sizing: border-box
+  .clients-item img
+    max-width: 200px
+
 
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+@media only screen and (max-width : 500px)
+  .container
+    padding: 0 15px
+  .header-logo
+    width: 114px
+  .header-mesh, .header-phone
+    display: none
+  .header-info
+    justify-content: space-around
+  .slogan__slogan
+    font-size: 26px
+    line-height: 33px
+  .btn-content
+    font-size: 16px
+    line-height: 20px
+  .content-btn
+    flex-direction: column
+  .main-btn
+    margin: 7px 25px
+  .buy-btn, .calc-btn
+    & .btn-content
+      text-align: center
+      padding: 20px 0
+  .services-text
+    font-size: 15px
+  .services-group1, .services-group2
+    flex-direction: column
+  .car
+    display: block
+    width: 100%!important
+    padding-top: 150px
+    margin-bottom: 20px
+  .car-item
+    max-width: 280px
+    margin: 0 auto
+    flex: 1
+    padding: 20px 40px
+  .box-item
+    padding: 20px 10px
+  .slider
+    padding-bottom: 70px
+  .footer
+    padding: 30px 0
+  .menu__list,
+  .footer-services__list1,
+  .footer-services__list2,
+  .footer-services__list3,
+  .footer-info
+    align-items: center
+    flex-direction: column
+  .menu__item, .menu
+    margin-bottom: 15px
+  .footer-services__item
+    margin-bottom: 10px
+  .footer-services__list1,
+  .footer-services__list2,
+  .footer-services__list3
+    margin: 0
+  .footer-address,
+  .footer-phone,
+  .footer-email
+    margin-bottom: 15px
+  .footer-info__text
+    text-align: center
+  .footer-info__text_bold
+    margin-bottom: 5px
+  .advisory p
+    margin-top: 35px
+
+    //margin-bottom: 0
+@media only screen and (max-width : 375px)
+  .slider-car
+    .slick-dots
+      li
+        flex: 1 1 calc(33.3% - 12px)
+        margin: 2px
+        &:after
+          left: 2px
+        &:before
+          right: 5px
+      button
+        &:before
+          left: 5px
+        &:after
+          right: 2px
 
 
 /* Custom, iPhone Retina */
@@ -103,6 +233,8 @@
     display: none
   .price-img__text
     display: block
+  .show-info
+    display: none
 
 
 /* Large Devices, Wide Screens */

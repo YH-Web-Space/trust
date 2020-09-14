@@ -60,3 +60,29 @@ $orange: #EE7743
   transition: .3s
   &:hover
     color: $orange
+
+%arrow-slider
+  overflow: hidden
+  position: relative
+  .slick-arrow
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 2
+    background: red
+    font-size: 0
+    width: 30px
+    height: 40px
+    border: none
+    outline: none
+    cursor: pointer
+    transition: .3s
+    &.slick-prev
+      left: 0
+      margin-right: 50px
+      background: url(../img/klients/arrow-left.svg) 0 0 / 100% no-repeat
+    &.slick-next
+      right: 0
+      background: url(../img/klients/arrow-right.svg) 0 0 / 100% no-repeat
+    &.slick-prev:hover, &.slick-next:hover
+      opacity: .5

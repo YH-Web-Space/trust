@@ -1,42 +1,61 @@
+"use strict";
 $(function () {
-    $('.slider').slick({
+    $(".slider").slick({
         dots: true,
         slidesToShow: 3,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 501,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+
+        ]
     });
-})
+});
 $(function () {
-    $('.slider-car').slick({
-        // responsive: [
-        //     {
-        //         breakpoint: 2561,
-        //         settings: "unslick"
-        //     },
-        //     {
-        //         breakpoint: 426,
-        //     }
-        // ]
+    $(".slider-car").slick({
+        // slidesToShow: 1,
+        // centerMode: true,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 2561,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 501,
+            }
+        ]
     });
 })
-let burger = document.querySelector('.burger');
-let navigation = document.querySelector('.navigation')
-let menu = document.querySelector('.menu__header');
-let services = document.querySelectorAll('.services-header__item')
+let burger = document.querySelector(".burger");
+let navigation = document.querySelector(".navigation");
+let menu = document.querySelector(".menu__header");
+let services = document.querySelectorAll(".services-header__item");
 
 function showNav() {
     let interval = 100;
 
-    this.classList.toggle('active');
-    navigation.classList.toggle('active');
-    menu.classList.toggle('active');
+    this.classList.toggle("active");
+    navigation.classList.toggle("active");
+    menu.classList.toggle("active");
     for (let i = 0; i < services.length; i++) {
         setTimeout(function (i) {
-            services[i].classList.toggle('active');
+            services[i].classList.toggle("active");
         }, interval * i, i);
     }
 }
 
-burger.addEventListener('click', showNav);
+burger.addEventListener("click", showNav);
 
 
 let acc = document.querySelectorAll(".show-info");
